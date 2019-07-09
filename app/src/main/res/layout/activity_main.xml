@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_accelerationMagnitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acceleration"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_linearAccData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Linear Acceleration"
+        app:layout_constraintEnd_toEndOf="@+id/tv_accelerationMagnitude"
+        app:layout_constraintStart_toStartOf="@+id/tv_accelerationMagnitude"
+        app:layout_constraintTop_toBottomOf="@+id/tv_accelerationMagnitude" />
+
+    <TextView
+        android:id="@+id/tv_motionSensorData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Motion Sensor Data"
+        app:layout_constraintEnd_toEndOf="@+id/tv_linearAccData"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="@+id/tv_linearAccData"
+        app:layout_constraintTop_toBottomOf="@+id/tv_linearAccData" />
+
+</android.support.constraint.ConstraintLayout>
