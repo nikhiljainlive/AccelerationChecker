@@ -25,12 +25,13 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         SensorManager sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         Sensor sensorAccelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         Sensor sensorLinearAcceleration = sensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
-        Sensor sensorMotion = sensorManager.getDefaultSensor(Sensor.TYPE_SIGNIFICANT_MOTION);
+        Sensor sensorMotion = sensorManager.getDefaultSensor(Sensor.TYPE_MOTION_DETECT);
 
         sensorManager.registerListener(this, sensorAccelerometer,
                 SensorManager.SENSOR_DELAY_NORMAL);
         sensorManager.registerListener(this, sensorLinearAcceleration, SensorManager.
                 SENSOR_DELAY_NORMAL);
+        sensorManager.registerListener(this, sensorMotion, sensorManager.SENSOR_DELAY_NORMAL);
 
         // TODO : Try motion sensor and location data for sensing motion data
 
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 showLinearAcceleartionData(event);
                 break;
 
+//                case Sensor.TYPE_SIGNIFICANT_MOTION
         }
     }
 
