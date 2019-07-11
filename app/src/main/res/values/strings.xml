@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AccelerationChecker</string>
+    <string name="tooltip_acceleration">Acceleration Value Text</string>
+    <string name="tooltip_linear_acceleration">Linear Acceleration Value Text</string>
 </resources>
